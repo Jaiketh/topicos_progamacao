@@ -16,11 +16,11 @@ services:
       labels:
         - "traefik.enable=true"
         - "traefik.docker.network=network_public"
-        - "traefik.http.routers.portainer.rule=Host(`pbenevid.server.bentektecnologia.com.br`)"
+        - "traefik.http.routers.portainer.rule=Host(`seunome.server.exemplo.com.br`)"
         - "traefik.http.routers.portainer.entrypoints=websecure"
         - "traefik.http.routers.portainer.priority=1"
         - "traefik.http.routers.portainer.tls.certresolver=letsencryptresolver"
-        - "traefik.http.services.portainer.loadbalancer.server.port=9000"
+        - "traefik.http.services.portainer.loadbalancer.server.port="Definir uma porta""
 
 networks:
   network_public:
