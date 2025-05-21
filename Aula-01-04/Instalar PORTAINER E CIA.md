@@ -1,7 +1,7 @@
 ## Tutorial de Instalação do Portainer (e dependências)
 
 ```d
-senha root: uperWym202x2
+senha root: "digite uma senha"
 ```
 
 Este tutorial organiza os comandos fornecidos para instalar o Portainer, juntamente com as dependências e configurações relacionadas, como Docker Swarm, rede overlay e um exemplo de deploy do Traefik (embora não seja estritamente necessário para o Portainer, está nos comandos).
@@ -80,7 +80,7 @@ sudo docker stack ps traefik
 ```d
 # Acesso:
 username: admin
-senha: uperWym202x2
+senha: "Sua senha aqui"
 ```
 1.  **Criar o arquivo de configuração do Portainer:**
     Você precisará criar um arquivo chamado `portainer.yaml` com a configuração para o serviço Portainer. Um exemplo básico pode incluir a imagem do Portainer, mapeamento de portas e a definição de volumes para persistência dos dados do Portainer.
@@ -90,7 +90,7 @@ senha: uperWym202x2
 ````
 
 Mudar a linha: 
-> "traefik.http.routers.portainer.rule=Host(`portainer.server.bentektecnologia.com.br`)"
+> "traefik.http.routers.portainer.rule=Host(`portainer.server.exemplo.com.br`)"
 
 **portainer.yaml**
 ```d
@@ -112,7 +112,7 @@ services:
       labels:
         - "traefik.enable=true"
         - "traefik.docker.network=network_public"
-        - "traefik.http.routers.portainer.rule=Host(`portainer.server.bentektecnologia.com.br`)"
+        - "traefik.http.routers.portainer.rule=Host(`portainer.server.exemplo.com.br`)"
         - "traefik.http.routers.portainer.entrypoints=websecure"
         - "traefik.http.routers.portainer.priority=1"
         - "traefik.http.routers.portainer.tls.certresolver=letsencryptresolver"
