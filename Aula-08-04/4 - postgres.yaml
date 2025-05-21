@@ -10,7 +10,7 @@ services:
     networks:
       - network_public
     ports:
-      - 5432:5432
+      - "Defina suas portas"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     deploy:
