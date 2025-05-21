@@ -10,7 +10,7 @@ services:
     networks:
       - network_public
     ports:
-      - "Defina suas portas"
+      - "Defina suas portas aqui, insira o valor das portas neste campo"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     deploy:
